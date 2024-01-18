@@ -54,11 +54,11 @@ docker network ls
 # create shared network
 docker network create demo
 # create containers
-docker run --network demo -d -p 8080:8080 flask-app
+docker run --network demo -d -p 8080:8080 flask-app:v2
 docker run --network demo -d nicolaka/netshoot sleep 99999
 docker exec -it <containerID> sh
 
-# Task: Using netshoot, make a request to flask app
+# Task: Using netshoot, make a curl request to flask app
 # Task: View the logs of flask app
 # Task: Create netshoot container in detached mode. It should to make a request to flask app (every 1 second)
 # Task: Stop and remove containers
